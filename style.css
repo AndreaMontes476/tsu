@@ -1,0 +1,274 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #f7e0e0;
+  color: #3d0505;
+  margin: 0;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background-color: #ffd6e8;
+  width: 100%;
+  position: sticky;   /* CLAVE: no se sale en mobile */
+  top: 0;
+  z-index: 1000;
+  padding: 20px 0;    /* el header crece según contenido */
+}
+
+/* ================= NAV ================= */
+.contenedor.nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= BOTONES HEADER ================= */
+.enlaces-header {
+  display: flex;
+  flex-wrap: wrap;        /* evita desbordes */
+  justify-content: center;
+  gap: 10px;
+}
+
+.enlaces-header a {
+  text-decoration: none;
+  padding: 12px 22px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  background: linear-gradient(145deg, #f12105, #f874ab);
+  border-radius: 30px;
+  box-shadow:
+    0 6px 0 #fd98bf,
+    0 10px 18px rgba(255, 47, 133, 0.45);
+  transition: all 0.25s ease;
+  min-width: 140px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.enlaces-header a:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 0 #c91d5f,
+    0 14px 22px rgba(255, 47, 133, 0.6);
+}
+
+.enlaces-header a:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 #c91d5f,
+    0 6px 12px rgba(255, 47, 133, 0.35);
+}
+
+/* ================= CONTENEDORES ================= */
+.contenido,
+.sobre-mi,
+.experiencia,
+.logros,
+.footer-contenedor {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* ================= TEXTOS ================= */
+h1 {
+  font-size: 42px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 30px 0 10px;
+  color: #d34343ca;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+ul {
+  margin-left: 20px;
+  line-height: 1.7;
+}
+
+/* ================= INTRO ================= */
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ================= IMÁGENES ================= */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================= IMAGEN PRINCIPAL ================= */
+.contenedor-imagen {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contenedor-imagen img {
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ================= DIPLOMAS / LOGROS ================= */
+.contenedor-diplomas {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+  gap: 20px;
+}
+
+.contenedor-diplomas img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  cursor: zoom-in;
+  transform: scale(0.92);
+  opacity: 0.9;
+}
+
+.contenedor-diplomas:hover img {
+  opacity: 0.45;
+  transform: scale(0.88);
+}
+
+.contenedor-diplomas img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+  z-index: 10;
+}
+
+/* ================= CONTACTO ================= */
+.contacto {
+  background-color: #eda6c4;
+  padding: 80px 20px;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.box {
+  padding: 40px 20px;
+  border-radius: 18px;
+  text-align: center;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-6px);
+}
+
+
+.box-wtsp { background-color: #e9fff2; }
+
+/* ================= FOOTER ================= */
+.footer {
+  background: linear-gradient(145deg, #ff5fa2, #f00303);
+  color: #fff;
+  padding: 25px 0;
+  margin-top: 50px;
+}
+
+.footer-contenedor {
+  text-align: center;
+}
+
+.footer-texto {
+  font-size: 14px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  p  { font-size: 1rem; }
+
+  .contenedor.nav {
+    flex-direction: column;
+  }
+
+  .enlaces-header {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .enlaces-header a {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* diplomas mobile */
+  .contenedor-diplomas img,
+  .contenedor-diplomas:hover img {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .contenedor-diplomas img:hover {
+    transform: scale(1.05);
+  }
+  video {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+video {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+}
+
